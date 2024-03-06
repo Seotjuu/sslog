@@ -12,4 +12,4 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
+Open [SSLOG](https://seotjuu.github.io/sslog/)
