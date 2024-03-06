@@ -1,7 +1,7 @@
 import { PanelBody, PanelContainer, PanelFooter } from "@/components/Panel";
 import Container from "@/components/containers/Container";
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <div className="w-full flex justify-between items-center bg-black text-white py-3 mobile:px-5 tablet:px-[10%] laptop:px-[20%] desktop:px-[20%]">
       <h1 className="mobile:text-3xl tablet:text-4xl laptop:text-5xl desktop:text-4xl">
@@ -14,7 +14,7 @@ export const Navbar = () => {
     </div>
   );
 };
-
+ 
 const Home = () => {
   return (
     <Container fluid>
