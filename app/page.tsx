@@ -1,5 +1,7 @@
+import Button from "@/components/Button";
 import { PanelBody, PanelContainer, PanelFooter } from "@/components/Panel";
 import Container from "@/components/containers/Container";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -8,8 +10,8 @@ const Navbar = () => {
         SSLOG
       </h1>
       <div className="flex justify-center gap-2">
-        <span>로그인</span>
-        <span>회원가입</span>
+        <Button><Link href={'/signin'}>로그인</Link></Button>
+        <Button><Link href={'/signup'}>회원가입</Link></Button>
       </div>
     </div>
   );
