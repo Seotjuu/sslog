@@ -2,15 +2,14 @@
   "homepage": "https://seotjuu.github.io/sslog/",
   "name": "sslog",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "predeploy": "next build",
-    "deploy": "git push origin --delete gh-pages && git init && git add -f out/ && git commit -m \"deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
-    "vercel-deploy": "next build && next export"
+    "deploy": "git push origin --delete gh-pages && git init && git add -f out/ && git commit -m \"deploy to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "next": "14.1.2",
