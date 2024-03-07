@@ -6,9 +6,8 @@ on:
       - main
 
 jobs:
-  build:
+  setup:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -17,16 +16,24 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 20
-
+  install:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
       - name: Install dependencies
         run: npm install
-
+  user:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
       - name: git set up user email
         run: git config --global user.email tjrenffl8@naver.com
-
       - name: git set up user name
         run: git config --global user.name Seotjuu
-
+  build:
+    needs: [install, user]
+    runs-on: ubuntu-latest
+    steps:
       - name: Build
         run: npm run build
 
