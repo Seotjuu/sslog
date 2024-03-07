@@ -4,9 +4,14 @@
 
 ```bash
 
-npm run deploy ( 권한 있어야함 github pages token 필요없음)
+커밋, 푸시 전 배포 상황 확인하고 싶을 때
+터미널에서 ->
 
-github pages actions ( 개발자가 아니고 장비에서 대신 해주기 때문에 토큰 필요 Build 후 )
+npm run deploy
+
+자동 배포
+
+github Actions 사용
 
 ```
 
