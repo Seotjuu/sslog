@@ -13,3 +13,6 @@ bun dev
 ```
 
 Open [SSLOG](https://seotjuu.github.io/sslog/)
+
+<!-- "predeploy": "next build",
+    "deploy": "git push origin --delete gh-pages && git init && git add -f out/ && git commit -m \"deploy to gh-pages\" && git subtree push --prefix out origin gh-pages" -->
