@@ -15,7 +15,6 @@ jobs:
       - name: Install and Build
         run: |
           npm install
-          git remote set-url origin https://github.com/Seotjuu/sslog.git
           git config --global user.name Seotjuu
           git config --global user.email tjrenffl8@naver.com
           npm run deploy
