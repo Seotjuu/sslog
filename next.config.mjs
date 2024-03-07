@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
-// const debug = process.env.NODE_ENV !== "production";
+const debug = process.env.NODE_ENV !== "production";
 const nextConfig = {
-  // assetPrefix: !debug ? '/sslog/' : '',
+  output: "export",
+  assetPrefix: !debug ? '/sslog/' : '',
+  trailingSlash: true,
 };
 
 export default nextConfig;
