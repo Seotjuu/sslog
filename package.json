@@ -1,5 +1,5 @@
 {
-  "homepage": "https://seotjuu.github.io/sslog/",
+  "homepage": "https://seotjuu.github.io/sslog",
   "name": "sslog",
   "version": "0.1.0",
   "private": false,
@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "next build",
-    "deploy": "touch ./out/.nojekyll && git push origin --delete gh-pages && git init && git add -f out/ && git commit -m \"deploy to gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "gh-pages -d out/"
   },
   "dependencies": {
     "next": "14.1.2",
