@@ -22,7 +22,9 @@ jobs:
         run: npm install
 
       - name: git set up user
-        run: git config --global credential.helper store
+        run: |
+          git config --global user.password "${{ secrets.GIT_PASSWORD }}"
+          git config --global user.email "${{ secrets.GIT_USEREMAIL }}"
 
       - name: Build
         run: npm run deploy
