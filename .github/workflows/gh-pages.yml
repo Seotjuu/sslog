@@ -29,6 +29,11 @@ jobs:
         run: |
           git remote set-url origin https://github.com/Seotjuu/sslog.git
 
+      - name: git set up user
+        run: |
+          git config --global user.name "${{ secrets.GIT_USERNAME }}"
+          git config --global user.email "${{ secrets.GIT_USEREMAIL }}"
+
       - name: git build and deploy
         run: npm run deploy
 
