@@ -1,4 +1,4 @@
-name: gh-pages Deploy
+name: Deploy
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
 
       - name: Build
         run: |
-          npm intsall
+          npm install
           npm run deploy
 
       - name: Deploy
