@@ -21,10 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: git set up user
-        run: |
-          git config --global user.email tjrenffl8@naver.com
-          git config --global user.name Seotjuu
+      - name: git set up user email
+        run: git config --global user.email tjrenffl8@naver.com
+
+      - name: git set up user name
+        run: git config --global user.name Seotjuu
 
       - name: Build
         run: npm run deploy
