@@ -25,7 +25,6 @@ const Home = () => {
   return (
     <Container fluid>
       <Navbar />
-
       <Container className="flex flex-wrap">
         <PanelContainer>
           <PanelBody title="게시물 제목1">게시물 내용</PanelBody>
