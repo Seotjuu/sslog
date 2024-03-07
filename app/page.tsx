@@ -10,13 +10,17 @@ const Navbar = () => {
         SSLOG
       </h1>
       <div className="flex justify-center gap-2">
-        <Button><Link href={'/signin'}>로그인</Link></Button>
-        <Button><Link href={'/signup'}>회원가입</Link></Button>
+        <Button>
+          <Link href={"/signin"}>로그인</Link>
+        </Button>
+        <Button>
+          <Link href={"/signup"}>회원가입</Link>
+        </Button>
       </div>
     </div>
   );
 };
- 
+
 const Home = () => {
   return (
     <Container fluid>
