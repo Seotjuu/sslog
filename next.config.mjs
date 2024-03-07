@@ -2,7 +2,7 @@
 const debug = process.env.NODE_ENV !== "production";
 const nextConfig = {
   output: "export",
-  // assetPrefix: !debug ? '/sslog/' : '',
+  assetPrefix: !debug ? '/sslog/' : '',
   trailingSlash: true,
 };
 
