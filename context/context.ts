@@ -1,8 +1,14 @@
-import React from 'react';
+'use client';
 
-const Context = React.createContext({});
+import { createContext }  from 'react';
 
-export const Provider = Context.Provider;
-export const Consumer = Context.Consumer;
+interface IContext {
+  prifix: string;
+}
 
-export default Context;
+const CreateContext = createContext<IContext>({ prifix: "" });
+
+export const ContextProvider = CreateContext.Provider;
+export const ContextConsumer = CreateContext.Consumer;
+
+export default CreateContext;

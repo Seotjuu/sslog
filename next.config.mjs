@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const debug = process.env.NODE_ENV !== "production";
 const nextConfig = {
-  assetPrefix: !debug ? '/sslog/' : '',
+  assetPrefix: !debug ? 'https://seotjuu.github.io/sslog/' : '',
   trailingSlash: true,
 };
 
