@@ -11,6 +11,7 @@
 npm run deploy
 
 자동 배포 | Github Actions 사용
+  - main brach push auto deploy
 
 내 얄팍한 지식으로 이해한 Github Actions logic
   - npm run build =>
