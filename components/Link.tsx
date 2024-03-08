@@ -6,7 +6,7 @@ interface LinkProps {
 }
 
 const LinkUrl = ({ href, children }: LinkProps) => {
-  return <Link href={"/sslog/" + href}>{children}</Link>;
+  return <Link href={href}>{children}</Link>;
 };
 
 export default LinkUrl;
