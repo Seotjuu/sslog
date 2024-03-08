@@ -40,3 +40,5 @@ jobs:
           git checkout -b vercel-build
           git push origin vercel-build
           git checkout -b main
+        with:
+          github_token: ${{ secrets.TOKEN }}
