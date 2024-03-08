@@ -29,16 +29,3 @@ jobs:
         with:
           github_token: ${{ secrets.TOKEN }}
           publish_dir: ./out
-
-      - name: Deploy to Vercel
-        run: |
-          git update-index --assume-unchanged next.config.mjs
-          git init
-          git add .
-          git commit -m "Deploy to vercel"
-          git update-index --no-assume-unchanged next.config.mjs
-          git checkout -b vercel-build
-          git push origin vercel-build
-          git checkout -b main
-        with:
-          github_token: ${{ secrets.TOKEN }}
