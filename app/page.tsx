@@ -1,7 +1,7 @@
 import Button from "@/components/Button";
+import Link from "@/components/Link";
 import { PanelBody, PanelContainer, PanelFooter } from "@/components/Panel";
 import Container from "@/components/containers/Container";
-import Link from "next/link";
 
 const Navbar = () => {
   return (

@@ -4,11 +4,9 @@
 
 ```bash
 
-커밋, 푸시 전 배포 상황 확인하고 싶을 때
+배포 상황 확인하고 싶을 때
 
-터미널에서 ->
-
-npm run deploy
+Local terminal : npm run deploy
 
 자동 배포 | Github Actions 사용
   - main brach push auto deploy
