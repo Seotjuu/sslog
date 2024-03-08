@@ -5,13 +5,18 @@
 ```bash
 
 커밋, 푸시 전 배포 상황 확인하고 싶을 때
+
 터미널에서 ->
 
 npm run deploy
 
-자동 배포
+자동 배포 | Github Actions 사용
 
-github Actions 사용
+내 얄팍한 지식으로 이해한 Github Actions logic
+  - npm run build =>
+  - gh-pages branch에 ./out 정적 파일 push 진행
+  - Github Secrets TOKEN으로 권한 설정
+  - gh-pages branch에 push 완료
 
 ```
 
