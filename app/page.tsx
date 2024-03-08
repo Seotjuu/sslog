@@ -16,9 +16,6 @@ const Navbar = () => {
         <Button>
           <Link href={"/signup"}>회원가입</Link>
         </Button>
-        <Button>
-          <Link href={"/"}>home</Link>
-        </Button>
       </div>
     </div>
   );
