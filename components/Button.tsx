@@ -22,7 +22,7 @@ const Button = ({children, className, onClick, variant }: IButton) => {
         
 
     return (
-        <button className={`border rounded-md p-1 ${buttonStyle}`}>{children}</button>
+        <button className={`w-full border rounded-md p-1 whitespace-nowrap ${buttonStyle} hover:brightness-75 transition-all  duration-300 `}>{children}</button>
     )
 }
 

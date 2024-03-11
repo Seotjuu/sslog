@@ -10,10 +10,10 @@ const Navbar = () => {
         SSLOG
       </h1>
       <div className="flex justify-center gap-2">
-        <Button>
+        <Button variant="light">
           <Link href={"/signin"}>로그인</Link>
         </Button>
-        <Button>
+        <Button variant="dark">
           <Link href={"/signup"}>회원가입</Link>
         </Button>
       </div>
