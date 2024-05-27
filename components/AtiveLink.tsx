@@ -7,8 +7,8 @@ interface LinkProps {
 
 const prefix = process.env.NODE_ENV === "development";
 
-const LinkUrl = ({ href, children }: LinkProps) => {
+const AtiveLink = ({ href, children }: LinkProps) => {
   return <Link href={(prefix ? "" : "/sslog") + href}>{children}</Link>;
 };
 
-export default LinkUrl;
+export default AtiveLink;
