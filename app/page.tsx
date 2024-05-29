@@ -45,10 +45,6 @@ const Home = () => {
             <PanelBody title="게시물 제목9">게시물 내용</PanelBody>
             <PanelFooter author="작성자" date="2024-03-06" />
           </PanelContainer>
-          <PanelContainer>
-            <PanelBody title="게시물 제목10">게시물 내용</PanelBody>
-            <PanelFooter author="작성자" date="2024-03-06" />
-          </PanelContainer>
         </div>
       </Container>
     </Container>

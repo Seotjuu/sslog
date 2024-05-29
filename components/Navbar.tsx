@@ -8,12 +8,12 @@ const Navbar = () => {
         <AtiveLink href={"/"}>SSLOG</AtiveLink>
       </h1>
       <div className="flex justify-center gap-2">
-        <Button variant="light">
-          <AtiveLink href={"/signin"}>로그인</AtiveLink>
-        </Button>
-        <Button variant="dark">
-          <AtiveLink href={"/signup"}>회원가입</AtiveLink>
-        </Button>
+        <AtiveLink href={"/signin"}>
+          <Button variant="light">로그인</Button>
+        </AtiveLink>
+        <AtiveLink href={"/signup"}>
+          <Button variant="dark">회원가입</Button>
+        </AtiveLink>
       </div>
     </div>
   );
