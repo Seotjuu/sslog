@@ -14,8 +14,8 @@ const config: Config = {
       },
     },
     screens: {
-      mobile: { max: '425px' },
-      tablet: { min: '426px', max: '1023px'},
+      mobile: { max: '430px' },
+      tablet: { min: '431px', max: '1023px'},
       laptop: { min: '1024px', max: '1439px'},
       desktop: { min: '1440px'},
     }

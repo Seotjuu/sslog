@@ -10,7 +10,7 @@ const Container = ({
   style?: React.CSSProperties;
 }) => {
   return fluid ? (
-    <div className={`w-full h-full ${className}`} style={style}>
+    <div className={`w-full h-full py-3 ${className}`} style={style}>
       {children}
     </div>
   ) : (
