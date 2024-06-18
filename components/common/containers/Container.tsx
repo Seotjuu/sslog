@@ -15,7 +15,7 @@ const Container = ({
     </div>
   ) : (
     <div
-      className={`${className} w-full h-full py-3 mobile:px-5 tablet:px-[10%] laptop:px-[20%] desktop:px-[20%]`}
+      className={`${className} w-full h-full py-3 mobile:px-5 tablet:px-[10%] laptop:px-[10%] desktop:px-[20%]`}
       style={style}
     >
       {children}

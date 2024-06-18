@@ -4,7 +4,14 @@ export const metadata = {
 };
 
 const layout = ({ children }: { children: React.ReactNode }) => {
-  return <div>{children}</div>;
+  return (
+    <div>
+      <div className="bg-[#fcfcfc] border-[#eeeeee] border-b py-3 text-2xl mobile:px-5 tablet:px-[10%] laptop:px-[20%] desktop:px-[20%]">
+        회원가입
+      </div>
+      {children}
+    </div>
+  );
 };
 
 export default layout;

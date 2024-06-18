@@ -1,8 +1,10 @@
+"use client";
+
 import Navbar from "@/components/common/Navbar";
 import "../styles/globals.css";
 import Container from "@/components/common/containers/Container";
 import { ImGithub } from "react-icons/im";
-import AtiveLink from "@/components/common/AtiveLink";
+import ActiveLink from "@/components/common/ActiveLink";
 
 const Footer = () => {
   return (
@@ -10,9 +12,9 @@ const Footer = () => {
       <div className="flex gap-5 justify-between items-center text-sm">
         <div>© 2024 SSLOG. Seotjuu</div>
 
-        <AtiveLink href="https://github.com/Seotjuu/">
+        <ActiveLink href="https://github.com/Seotjuu/">
           <ImGithub size={25} />
-        </AtiveLink>
+        </ActiveLink>
       </div>
     </Container>
   );
@@ -23,9 +25,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html>
       <body className="flex flex-col min-h-[100vh]">
         <Navbar />
-        <div className="bg-[#fcfcfc] border-[#eeeeee] border-b py-3 text-2xl mobile:px-5 tablet:px-[10%] laptop:px-[20%] desktop:px-[20%]">
-          로그인
-        </div>
         <div>{children}</div>
         <Footer />
       </body>
