@@ -3,6 +3,7 @@ import Button from "@/components/common/Button";
 import Input from "@/components/common/Input";
 import Container from "@/components/common/containers/Container";
 import FormContainer from "@/components/common/containers/FormContainer";
+import { SignupFormFields } from "@/constant/signup/signupFormFields";
 import { CiLock, CiUser, CiMail, CiCalendar, CiPhone } from "react-icons/ci";
 const Signup = () => {
   return (
@@ -12,35 +13,18 @@ const Signup = () => {
           회원가입
         </h1>
         <div className="flex justify-center flex-col gap-4">
-          {/* 정규식 추가 예정 */}
-          <Input label={<CiUser size={20} />} type="id" placeholder="아이디" />
-          <Input
-            label={<CiLock size={20} />}
-            type="password"
-            placeholder="비밀번호"
-          />
-          <Input
-            label={<CiLock size={20} />}
-            type="password"
-            placeholder="비밀번호 확인"
-          />
-          <Input
-            label={<CiMail size={20} />}
-            type="text"
-            placeholder="이메일 주소"
-          />
-
-          <Input label={<CiUser size={20} />} type="text" placeholder="이름" />
-          <Input
-            label={<CiCalendar size={20} />}
-            type="number"
-            placeholder="생년월일 8자리"
-          />
-          <Input
-            label={<CiPhone size={20} />}
-            type="number"
-            placeholder="휴대전화번호"
-          />
+          {SignupFormFields.map((field, index_st) => (
+            <div key={index_st} className="flex flex-col gap-1">
+              <Input
+                label={field.label}
+                type={field.type}
+                placeholder={field.placeholder}
+                name={field.name}
+              />
+              {/* 정규식 함수 진행 */}
+              {/* <span className="text-xs text-red-500">{field.message}</span> */}
+            </div>
+          ))}
 
           <Button variant="dark">
             <ActiveLink href={"/signin"}>회원가입</ActiveLink>

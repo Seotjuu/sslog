@@ -18,7 +18,11 @@ const SigninFindInfoModal = () => {
       size="md"
       isOpen={show}
       modalButton={
-        <button type="button" onClick={modalShowHandler}>
+        <button
+          type="button"
+          onClick={modalShowHandler}
+          className="py-1 hover:underline hover:rounded-lg  duration-300"
+        >
           아이디 / 비밀번호 찾기
         </button>
       }

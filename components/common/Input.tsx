@@ -2,8 +2,8 @@ interface InputPropsType {
   label?: React.ReactNode;
   type: string;
   value?: any;
-  defaultValue?: any;
   placeholder?: string;
+  name?: string;
   maxLength?: number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -12,7 +12,7 @@ const Input = ({
   label,
   type,
   value,
-  defaultValue,
+  name,
   placeholder,
   maxLength,
   onChange,
@@ -25,7 +25,7 @@ const Input = ({
         className="w-full focus:outline-none"
         type={type}
         value={value}
-        defaultValue={defaultValue}
+        name={name}
         placeholder={placeholder}
         maxLength={maxLength}
         onChange={onChange}
