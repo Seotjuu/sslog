@@ -27,7 +27,7 @@ const Signup = () => {
           <Input
             label={<CiMail size={20} />}
             type="text"
-            placeholder="[선택] 이메일 주소"
+            placeholder="이메일 주소"
           />
 
           <Input label={<CiUser size={20} />} type="text" placeholder="이름" />
@@ -42,7 +42,7 @@ const Signup = () => {
             placeholder="휴대전화번호"
           />
 
-          <Button variant="dark" className="py-2">
+          <Button variant="dark">
             <ActiveLink href={"/signin"}>회원가입</ActiveLink>
           </Button>
         </div>

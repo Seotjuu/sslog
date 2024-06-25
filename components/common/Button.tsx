@@ -21,7 +21,8 @@ const Button = ({ children, className, onClick, variant }: IButton) => {
   return (
     <button
       onClick={onClick}
-      className={`w-full border rounded-sm py-1 px-2 whitespace-nowrap items-center text-sm ${buttonStyle} hover:brightness-75 transition-all duration-300 ${className}`}
+      type={"button"}
+      className={`w-full border rounded-sm py-2 px-4 whitespace-nowrap items-center text-sm ${buttonStyle} hover:brightness-75 transition-all duration-300 ${className}`}
     >
       {children}
     </button>
