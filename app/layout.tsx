@@ -12,9 +12,9 @@ const Footer = () => {
       <div className="flex gap-5 justify-between items-center text-sm">
         <div>© 2024 SSLOG. Seotjuu</div>
 
-        <ActiveLink href="https://github.com/Seotjuu/">
+        <a href="https://github.com/Seotjuu/">
           <ImGithub size={25} />
-        </ActiveLink>
+        </a>
       </div>
     </Container>
   );
