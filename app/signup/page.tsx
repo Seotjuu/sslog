@@ -13,6 +13,7 @@ const Signup = () => {
           회원가입
         </h1>
         <div className="flex justify-center flex-col gap-4">
+          
           {SignupFormFields.map((field, index_st) => (
             <div key={index_st} className="flex flex-col gap-1">
               <Input
