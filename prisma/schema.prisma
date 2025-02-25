@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+
+// 1. 모델 수정 및 정의시 마이그레이션
+// npx prisma migrate dev --name init
+
+// localhost:5555 // admin server page
+// npx prisma studio
+
+// @id Primary Ket setting
+
+model User {
+  id            String    @id @default(uuid())
+  userId        String?   @unique // 아이디 필드
+  name          String?   // 이름
+  email         String?   @unique // 이메일
+  emailVerified DateTime?
+  password      String?   // 비밀번호 (해시된 형태)
+  birthdate     String? // 생년월일
+  phoneNumber   String?   // 휴대전화번호
+}
