@@ -4,7 +4,7 @@ import Button from "@/components/common/Button";
 import Input from "@/components/common/Input";
 import Container from "@/components/common/containers/Container";
 import FormContainer from "@/components/common/containers/FormContainer";
-import { IFormData, ISignupFormFields, SignupFormFields } from "@/constant/signup/signupFormFields";
+import { IFormData, ISignFormFields, SignupFormFields } from "@/constant/signup/signupFormFields";
 import axios from "axios";
 import { useState } from "react";
 
@@ -29,7 +29,7 @@ const Signup = () => {
   }
 
   const checkValidation = (field_name: string) => {
-    if(SignupFormFields.find((field: ISignupFormFields) => field.name === field_name)!.regex.test(formData[field_name])) {
+    if(SignupFormFields.find((field: ISignFormFields) => field.name === field_name)!.regex.test(formData[field_name])) {
       if(field_name === "pwdCheck" && formData.pwd !== formData.pwdCheck) {
         return true;
       }
@@ -50,17 +50,20 @@ const Signup = () => {
         return;
       }
 
-      await axios.post("/api/signup/", {
+      await axios.post("/api/auth/signup/", {
         userId: formData.id,
         password: formData.pwd,
         name: formData.name,
         email: formData.email,
         birthdate: formData.birth,
         phoneNumber: formData.phone
+      }).then((res) => {
+        if(res.status === 200) {
+          alert("회원가입이 완료되었습니다.");
+          window.location.href = "/signin";
+        }
       });
 
-      alert("회원가입이 완료되었습니다.");
-      // window.location.href = "/signin";
     }
     catch(e:any) {
       console.log(e.message);

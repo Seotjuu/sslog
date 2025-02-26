@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
   const existingUser = await prisma.user.findFirst({
     where: { OR: [{ userId }, { email }] },
   });
-  
+
   if (existingUser) {
     return NextResponse.json({ error: 'User ID or Email already exists' }, { status: 400 });
   }
@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
         phoneNumber,
       },
     });
-    return NextResponse.json(user, { status: 201 });
+    return NextResponse.json(user, { status: 200 });
   } catch (error) {
     console.log(error);
     return NextResponse.json({ error: 'Registration failed' }, { status: 500 });

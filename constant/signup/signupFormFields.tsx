@@ -11,7 +11,7 @@ export interface IFormData {
   phone: string;
 }
 
-export interface ISignupFormFields {
+export interface ISignFormFields {
   [key: string]: React.ReactNode | string | RegExp;
   label: React.ReactNode;
   type: string;
@@ -21,7 +21,7 @@ export interface ISignupFormFields {
   regex: RegExp;
 }
 
-export const SignupFormFields: ISignupFormFields[] = [
+export const SignupFormFields: ISignFormFields[] = [
   {
     label: <CiUser size={20} />,
     type: "text",
