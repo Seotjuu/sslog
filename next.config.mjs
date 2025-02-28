@@ -2,7 +2,6 @@
 const debug = process.env.NODE_ENV !== "production";
 const nextConfig = {
   output: "standalone",
-  assetPrefix: !debug ? '/sslog/' : '',
   trailingSlash: true,
 };
 
