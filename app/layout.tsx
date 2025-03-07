@@ -1,10 +1,8 @@
-"use client";
-
 import Navbar from "@/components/common/Navbar";
 import "../styles/globals.css";
 import Container from "@/components/common/containers/Container";
 import { ImGithub } from "react-icons/im";
-import ActiveLink from "@/components/common/ActiveLink";
+import { SessionProvider } from "next-auth/react";
 
 const Footer = () => {
   return (
@@ -24,9 +22,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html>
       <body className="flex flex-col min-h-[100vh]">
-        <Navbar />
-        <div>{children}</div>
-        <Footer />
+        <SessionProvider>
+          <Navbar />
+          <div>{children}</div>
+          <Footer />
+        </SessionProvider>
       </body>
     </html>
   );
